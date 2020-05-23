@@ -14,10 +14,11 @@ from .managers.status import StatusCollectionManager
 from .managers.sticker_pack import StickerPackCollectionManager
 from .managers.storage import StorageManager
 from .managers.stream import StreamManager
+from .managers.status_v3 import StatusV3CollectionManager
 from .managers.wap import WapManager
 from .results import MonitorResult, Result
 
-__version__ = '0.8.4'
+__version__ = '0.9.1'
 
 
 class Whalesong(BaseManager):
@@ -74,7 +75,7 @@ class Whalesong(BaseManager):
         self._submanagers['display_info'] = DisplayInfoManager(self._driver, manager_path='displayInfo')
         self._submanagers['live_locations'] = LiveLocationCollectionManager(self._driver, manager_path='liveLocations')
         self._submanagers['mutes'] = MuteCollectionManager(self._driver, manager_path='mutes')
-
+        self._submanagers['status_v3'] = StatusV3CollectionManager(self._driver, manager_path='statusV3')
         self._fut_running = None
 
     @property
@@ -104,7 +105,7 @@ class Whalesong(BaseManager):
         """
         Wait until Whalesong service is stopped.
         """
-        await self._driver.whai_until_stop()
+        await self._driver.wait_until_stop()
 
     async def screenshot(self) -> BytesIO:
         """

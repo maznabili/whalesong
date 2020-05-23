@@ -2,6 +2,24 @@
 Changelog
 =========
 
+
+--------------------------------
+Version 0.9.1 (Work in progress)
+--------------------------------
+
+* Fix `Issue #106 <https://github.com/alfred82santa/whalesong/issues/106>`_
+
+-------------
+Version 0.9.0
+-------------
+
+* Added Whatsapp Stories management (StatusV3). Thx to @jabolina.
+* Added logout feature. Thx to @parthibd.
+* Fixed stop/start driver (see `Issue #82 <https://github.com/alfred82santa/whalesong/issues/82>`_). Thx to @parthibd.
+* Fixed Firefox driver initialization in order to allow more than one process. Thx to @parthibd.
+* Fixed `wait_until_stop` driver method.
+* Examples now stop gracefully.
+
 -------------
 Version 0.8.4
 -------------

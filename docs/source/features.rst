@@ -52,4 +52,5 @@ Whatsapp features
 * Display information management.
 * Live location management.
 * Mutes management.
-* It's able to revoke messages (delete messages for others)
+* It's able to revoke messages (delete messages for others).
+* List and manage WhatsApp Status version 3 (Stories).
